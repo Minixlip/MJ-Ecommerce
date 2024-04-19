@@ -5,6 +5,8 @@ import Carousel from '../components/Carousel';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState, useRef } from 'react';
 import { FaArrowRightLong } from 'react-icons/fa6';
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { CiMail } from 'react-icons/ci';
 import logoipsum1 from '../assets/logoipsum/logoipsum-1.svg';
 import logoipsum2 from '../assets/logoipsum/logoipsum-2.svg';
 import logoipsum3 from '../assets/logoipsum/logoipsum-3.svg';
@@ -837,10 +839,38 @@ const Home = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex flex-col">Socials</div>
+              <div className="flex  gap-2">
+                <a href="https://www.facebook.com/">
+                  <FaFacebook
+                    size={'30px'}
+                    className="cursor-pointer"
+                  />
+                </a>
+
+                <a href="https://www.instagram.com/">
+                  <FaInstagram
+                    size={'30px'}
+                    className="cursor-pointer"
+                  />
+                </a>
+
+                <a href="https://www.twitter.com/">
+                  <FaTwitter
+                    size={'30px'}
+                    className="cursor-pointer"
+                  />
+                </a>
+                <a className="#">
+                  {' '}
+                  <CiMail
+                    size={'30px'}
+                    className="cursor-pointer"
+                  />
+                </a>
+              </div>
             </div>
-            <div className="flex justify-center">
-              All Rights Reserved By Mo Shihab
+            <div className="flex justify-center mt-10">
+              All Rights Reserved By @Mo Shihab
             </div>
           </div>
         </div>
