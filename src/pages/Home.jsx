@@ -741,7 +741,7 @@ const Home = () => {
         </div>
       </section>
       <footer className="min-h-[50vh] pt-32">
-        <div className=" py-24 bg-blue-500">
+        <div className=" py-24 bg-blue-500 px-4 ">
           <div className="flex justify-between lg:mx-44">
             <div>
               <span className="text-white font-semibold text-4xl text-wrap">
@@ -765,7 +765,7 @@ const Home = () => {
                   background: '#3b82f6',
                   transition: { ease: 'linear', duration: 0.3 },
                 }}
-                className="text-2xl font-medium px-12 py-3 text-black"
+                className="sm:text-2xl font-medium sm:px-12 py-3 text-black"
               >
                 SIGN UP FOR FREE
               </motion.button>
