@@ -40,13 +40,9 @@ const addProduct = async (req, res) => {
   }
 };
 
-const findProduct = async (req, res) => {
-  const { name } = req.body;
-};
-
 const getProducts = async (req, res) => {
   try {
-    const products = await Product.find({}).toArray();
+    const products = await Product.find({});
 
     res.status(200).json({ products });
   } catch (error) {
@@ -56,4 +52,5 @@ const getProducts = async (req, res) => {
 
 module.exports = {
   addProduct,
+  getProducts,
 };
