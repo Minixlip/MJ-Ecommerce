@@ -41,10 +41,29 @@ const addProduct = async (req, res) => {
 };
 
 const getProducts = async (req, res) => {
-  try {
-    const products = await Product.find({});
+  const { category } = req.body;
 
-    res.status(200).json({ products });
+  try {
+    if (!category) {
+      throw Error('No category selected');
+    }
+    if (category === 'ALL') {
+      const products = await Product.find({});
+      res.status(200).json({ products });
+    }
+    if (category === 'MEN') {
+      const products = await Product.find({ gender: 'male', adult: true });
+
+      res.status(200).json({ products });
+    }
+    if (category === 'WOMEN') {
+      const products = await Product.find({ gender: 'female', adult: true });
+      res.status(200).json({ products });
+    }
+    if (category === 'KIDS') {
+      const products = await Product.find({ adult: false });
+      res.status(200).json({ products });
+    }
   } catch (error) {
     res.status(400).json({ error });
   }

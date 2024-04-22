@@ -10,6 +10,6 @@ const router = express.Router();
 router.post('/add', addProduct);
 
 // Get all Products
-router.get('/fetch', getProducts);
+router.post('/fetch', getProducts);
 
 module.exports = router;

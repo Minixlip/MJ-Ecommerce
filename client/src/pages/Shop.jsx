@@ -20,9 +20,7 @@ const Shop = () => {
   const { fetchProduct, error, products } = useFetchProduct();
 
   useEffect(() => {
-    if (category === 'ALL') {
-      fetchProduct();
-    }
+    fetchProduct({ category });
   }, [category]);
 
   return (
