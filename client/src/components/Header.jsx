@@ -1,16 +1,17 @@
-import { FaSearch, FaShoppingBag } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { FaSearch, FaShoppingBag } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="flex mx-6 xl:mx-64 py-5 lg:py-10 items-end bg-transparent">
       <motion.div
-        initial={{ y: '-400%' }}
+        initial={{ y: "-400%" }}
         animate={{
-          y: ['-400%', '0%'],
+          y: ["-400%", "0%"],
           transition: {
-            type: 'spring',
-            ease: 'easeIn',
+            type: "spring",
+            ease: "easeIn",
             duration: 1.7,
             delay: 0.5,
           },
@@ -33,28 +34,31 @@ const Header = () => {
         </ul>
       </motion.div>
       <motion.div
-        initial={{ y: '-400%' }}
+        initial={{ y: "-400%" }}
         animate={{
-          y: ['-400%', '0%'],
+          y: ["-400%", "0%"],
           transition: {
-            type: 'spring',
-            ease: 'easeIn',
+            type: "spring",
+            ease: "easeIn",
             duration: 1.7,
             delay: 0.5,
           },
         }}
       >
-        <h1 className="text-xl lg:text-3xl tracking-wide cursor-pointer ">
+        <Link
+          to="/"
+          className="text-xl lg:text-3xl tracking-wide cursor-pointer "
+        >
           MOXIE
-        </h1>
+        </Link>
       </motion.div>
       <motion.div
-        initial={{ y: '-400%' }}
+        initial={{ y: "-400%" }}
         animate={{
-          y: ['-400%', '0%'],
+          y: ["-400%", "0%"],
           transition: {
-            type: 'spring',
-            ease: 'easeIn',
+            type: "spring",
+            ease: "easeIn",
             duration: 1.7,
             delay: 0.5,
           },
@@ -70,10 +74,10 @@ const Header = () => {
               <a href="/contact">CONTACT</a>
             </li>
             <li className="cursor-pointer">
-              <FaSearch size={'20px'} />
+              <FaSearch size={"20px"} />
             </li>
             <li className="cursor-pointer">
-              <FaShoppingBag size={'20px'} />
+              <FaShoppingBag size={"20px"} />
             </li>
           </ul>
         </div>
