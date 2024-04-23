@@ -4,6 +4,8 @@ import { useFetchProduct } from '../hooks/FetchProducts';
 import { motion } from 'framer-motion';
 
 import { useEffect, useState } from 'react';
+import Footer from '../components/Footer';
+import ErrorPopUp from '../components/Popups/ErrorPopUp';
 
 const zoomIn = {
   initial: { scale: 1, WebkitFilter: 'brightness(100%)' },
@@ -122,6 +124,8 @@ const Shop = () => {
           </div>
         </div>
       </div>
+      <Footer />
+      {error && <ErrorPopUp error={error} />}
     </main>
   );
 };

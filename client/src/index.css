@@ -29,6 +29,41 @@
   background-repeat: no-repeat;
 }
 
+.cardBg {
+  background: url('https://framerusercontent.com/images/xkSQZzf8aaWDeohirXzHK6tMCQ.jpg?scale-down-to=2048');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.instaCardBG {
+  background: url('https://framerusercontent.com/images/loMMGmMx99iT3MTTxx1sRotu260.jpg?scale-down-to=1024');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.instaCardBG2 {
+  background: url('https://framerusercontent.com/images/M2WAUBTf1oy45GOhezNlrMFGrk.jpg?scale-down-to=1024');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.instaCardBG3 {
+  background: url('https://framerusercontent.com/images/mw4Ie2Fs2QvK2MVyohtc6HRGw.jpg?scale-down-to=1024');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.instaCardBG4 {
+  background: url('https://framerusercontent.com/images/sv4saN07BOwi4IdhAmljgHMlo.jpg?scale-down-to=1024');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .item {
   min-height: 30rem;
   min-width: 23rem;
