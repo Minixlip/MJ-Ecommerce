@@ -77,7 +77,9 @@ const Header = () => {
               <FaSearch size={"20px"} />
             </li>
             <li className="cursor-pointer">
-              <FaShoppingBag size={"20px"} />
+              <Link to={"/shop"}>
+                <FaShoppingBag size={"20px"} />
+              </Link>
             </li>
           </ul>
         </div>

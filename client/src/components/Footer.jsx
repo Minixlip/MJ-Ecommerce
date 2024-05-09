@@ -1,35 +1,35 @@
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import { CiMail } from 'react-icons/ci';
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { CiMail } from "react-icons/ci";
 
 const Footer = () => {
   return (
     <footer className="min-h-[50vh] pt-32">
       <div className=" py-24 bg-blue-500 px-4 ">
-        <div className="flex justify-between lg:mx-44">
-          <div>
-            <span className="text-white font-semibold text-4xl text-wrap">
+        <div className="flex flex-col lg:flex-row gap-y-10 justify-between lg:mx-44">
+          <div className="">
+            <span className="text-white font-semibold text-2xl lg:text-4xl text-wrap">
               Sign up to our newsletter <br /> & get 20% off
             </span>
           </div>
           <div className="w-fit drop-shadow shadow-black">
             <motion.button
               animate={{
-                y: ['+200%', '0%'],
+                y: ["+200%", "0%"],
                 opacity: [0, 1],
                 transition: {
-                  type: 'spring',
-                  ease: 'easeIn',
+                  type: "spring",
+                  ease: "easeIn",
                   duration: 1.7,
                   delay: 0.5,
                 },
               }}
-              initial={{ background: '#ffffff' }}
+              initial={{ background: "#ffffff" }}
               whileHover={{
-                background: '#3b82f6',
-                transition: { ease: 'linear', duration: 0.3 },
+                background: "#3b82f6",
+                transition: { ease: "linear", duration: 0.3 },
               }}
-              className="sm:text-2xl font-medium sm:px-12 py-3 text-black"
+              className="text-lg sm:text-2xl font-medium px-12 py-3 text-black"
             >
               SIGN UP FOR FREE
             </motion.button>
@@ -38,7 +38,7 @@ const Footer = () => {
       </div>
       <div className="py-20">
         <div className="flex flex-col">
-          <div className="flex justify-evenly flex-wrap items-start">
+          <div className="flex flex-col sm:flex-row gap-y-10 mx-10 sm:mx-0 justify-evenly flex-wrap items-start">
             <div className="flex flex-col gap-2">
               <span className="text-black font-medium tracking-wide text-2xl ">
                 MOXIE
@@ -52,22 +52,13 @@ const Footer = () => {
                 Navigation
               </span>
               <div className="flex flex-col  text-lg font-light gap-1">
-                <a
-                  href="/"
-                  className="hover:underline underline-offset-1"
-                >
+                <a href="/" className="hover:underline underline-offset-1">
                   Home
                 </a>
-                <a
-                  href="/shop"
-                  className="hover:underline underline-offset-1"
-                >
+                <a href="/shop" className="hover:underline underline-offset-1">
                   Shop
                 </a>
-                <a
-                  href="/about"
-                  className="hover:underline underline-offset-1"
-                >
+                <a href="/about" className="hover:underline underline-offset-1">
                   About
                 </a>
                 <a
@@ -105,31 +96,19 @@ const Footer = () => {
             </div>
             <div className="flex  gap-2">
               <a href="https://www.facebook.com/">
-                <FaFacebook
-                  size={'30px'}
-                  className="cursor-pointer"
-                />
+                <FaFacebook size={"30px"} className="cursor-pointer" />
               </a>
 
               <a href="https://www.instagram.com/">
-                <FaInstagram
-                  size={'30px'}
-                  className="cursor-pointer"
-                />
+                <FaInstagram size={"30px"} className="cursor-pointer" />
               </a>
 
               <a href="https://www.twitter.com/">
-                <FaTwitter
-                  size={'30px'}
-                  className="cursor-pointer"
-                />
+                <FaTwitter size={"30px"} className="cursor-pointer" />
               </a>
               <a className="#">
-                {' '}
-                <CiMail
-                  size={'30px'}
-                  className="cursor-pointer"
-                />
+                {" "}
+                <CiMail size={"30px"} className="cursor-pointer" />
               </a>
             </div>
           </div>

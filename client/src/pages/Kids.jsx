@@ -1,10 +1,9 @@
-import Header from "../components/Header";
-import { Link } from "react-router-dom";
 import { useFetchProduct } from "../hooks/FetchProducts";
 import { motion } from "framer-motion";
-
 import { useEffect, useState } from "react";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 import ErrorPopUp from "../components/Popups/ErrorPopUp";
 
 const zoomIn = {
@@ -17,8 +16,8 @@ const revealbtn = {
   animate: { y: "0%", opacity: 1 },
 };
 
-const Shop = () => {
-  const [category, setCategory] = useState("ALL");
+const Kids = () => {
+  const [category, setCategory] = useState("KIDS");
   const { fetchProduct, error, products } = useFetchProduct();
 
   useEffect(() => {
@@ -32,44 +31,46 @@ const Shop = () => {
       </div>
       <div className="min-h-screen">
         <div className="flex justify-center items-center flex-col pt-28">
-          <span className="text-7xl font-bold">SHOP</span>
+          <span className="text-3xl lg:text-7xl font-bold">
+            KIDS COLLECTION
+          </span>
           <div className="pt-10 flex gap-4 text-xl">
             <Link to={"/"} className="hover:underline">
               Home
             </Link>
             <span className="select-none">{">"}</span>
-            <span className="text-blue-500">Shop</span>
+            <span className="text-blue-500">Kids Collection</span>
           </div>
         </div>
         <div className="mx-4 xl:mx-64 pt-28">
           <div className="flex gap-4 text-xl font-semibold">
             <button
-              onClick={() => setCategory("ALL")}
-              disabled={category === "ALL"}
-              className={category === "ALL" ? "text-gray-500" : null}
-            >
-              All
-            </button>
-            <button
-              onClick={() => setCategory("MEN")}
-              disabled={category === "MEN"}
-              className={category === "MEN" ? "text-gray-500" : null}
-            >
-              MEN
-            </button>
-            <button
-              onClick={() => setCategory("WOMEN")}
-              disabled={category === "WOMEN"}
-              className={category === "WOMEN" ? "text-gray-500" : null}
-            >
-              WOMEN
-            </button>
-            <button
               onClick={() => setCategory("KIDS")}
               disabled={category === "KIDS"}
               className={category === "KIDS" ? "text-gray-500" : null}
             >
-              KIDS
+              All
+            </button>
+            <button
+              onClick={() => setCategory("TSHIRT")}
+              disabled={category === "TSHIRT"}
+              className={category === "TSHIRT" ? "text-gray-500" : null}
+            >
+              T-SHIRT
+            </button>
+            <button
+              onClick={() => setCategory("JACKET")}
+              disabled={category === "JACKET"}
+              className={category === "JACKET" ? "text-gray-500" : null}
+            >
+              JACKET
+            </button>
+            <button
+              onClick={() => setCategory("PANTS")}
+              disabled={category === "PANTS"}
+              className={category === "PANTS" ? "text-gray-500" : null}
+            >
+              PANTS
             </button>
           </div>
           <div className="flex flex-wrap gap-8 xl:gap-4 mt-8">
@@ -107,15 +108,15 @@ const Shop = () => {
                       }}
                       className=" absolute bottom-14 right-1/4 text-xl font-semibold px-6 py-3 text-black bg-white "
                     >
-                      BUY NOW
+                      <Link to={{ pathname: `/item/${item.name}` }}>
+                        BUY NOW
+                      </Link>
                     </motion.button>
                   </div>
                   <div className="flex flex-col gap-y-2">
-                    <span className="font-semibold hover:underline underline-offset-1 overflow-hidden text-nowrap">
-                      <Link to={{ pathname: `/item/${item.name}` }}>
-                        {item.name}
-                      </Link>
-                    </span>
+                    <Link to={{ pathname: `/item/${item.name}` }}>
+                      {item.name}
+                    </Link>
                     <span className="font-semibold">£{item.price}</span>
                   </div>
                 </motion.div>
@@ -123,10 +124,12 @@ const Shop = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
       {error && <ErrorPopUp error={error} />}
     </main>
   );
 };
 
-export default Shop;
+export default Kids;
